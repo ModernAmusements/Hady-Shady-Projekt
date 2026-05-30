@@ -32,6 +32,80 @@ python3 main.py
 python3 game.py
 ```
 
+## Windows – Python einrichten
+
+So wird ein Windows-PC coding-ready für dieses Projekt:
+
+### 1. Python installieren
+
+1. [python.org](https://www.python.org/downloads/) öffnen
+2. Aktuelle Version herunterladen (z. B. Python 3.13)
+3. **Wichtig:** Beim Installieren den Haken **„Add Python to PATH“** setzen
+4. Installation abschließen
+
+Prüfen in der Eingabeaufforderung (CMD) oder PowerShell:
+```cmd
+python --version
+pip --version
+```
+
+### 2. Projekt herunterladen
+
+```cmd
+cd Desktop\HADY
+```
+
+### 3. pytest installieren
+
+```cmd
+pip install pytest
+```
+
+### 4. Skripte ausführen
+
+```cmd
+python main.py
+python game.py
+python -m pytest tests/ -v
+```
+
+### Tastenkürzel
+
+| Aktion | Befehl |
+|--------|--------|
+| Eingabeaufforderung öffnen | `Windows-Taste` → `cmd` → Enter |
+| In Verzeichnis wechseln | `cd Desktop\HADY\blatt_01` |
+| Python-Code ausführen | `python main.py` |
+
+## macOS – Python einrichten
+
+### 1. Python installieren (via Homebrew)
+
+```bash
+brew install python
+```
+
+Prüfen:
+```bash
+python3 --version
+pip3 --version
+```
+
+### 2. pytest installieren
+
+```bash
+pip3 install pytest
+```
+
+### 3. Skripte ausführen
+
+```bash
+cd blatt_01
+python3 main.py
+python3 game.py
+python3 -m pytest tests/ -v
+```
+
 ---
 
 ## Projektstruktur
