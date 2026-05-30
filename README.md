@@ -5,6 +5,9 @@ Prof. Dirk Pflüger, Stefan Zimmer – WS 2025/26
 
 Musterlösungen und Converter-Tool für Aufgaben zu **Ausdrücken und Zuweisungen** sowie **booleschen Ausdrücken**.
 
+
+// Shady needs to fix the error in the game mode after selecting how many round the user wants to play
+
 ---
 
 ## Skripte ausführen
