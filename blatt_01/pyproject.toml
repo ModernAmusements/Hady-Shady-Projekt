@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "blatt_01"
+version = "1.0.0"
+description = "Musterlösungen und Converter-Tool zu Übungsblatt 1 – Grundlagen der Informatik (SimTech)"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
