@@ -229,7 +229,7 @@ def run_round(round_num: int, total: int) -> bool:
 
 
 def _needs_converter_not_supported(from_f, to_f):
-    unsupported = [(2, 3), (2, 4), (3, 2), (3, 4), (4, 2), (4, 3), (2, 2), (3, 3), (4, 4), (1, 1)]
+    unsupported = [(2, 3), (2, 4), (3, 2), (3, 4), (4, 2), (4, 3), (2, 2), (3, 3), (4, 4), (1, 1), (2, 1), (3, 1), (4, 1)]
     return (from_f, to_f) in unsupported
 
 
