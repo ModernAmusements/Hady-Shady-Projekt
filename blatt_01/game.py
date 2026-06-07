@@ -100,9 +100,12 @@ def generate_distractors(correct: str, expr: str, from_form: int, to_form: int, 
             pass
 
     result = list(distractors)[:count]
-    while len(result) < count:
+    max_attempts = 50
+    attempts = 0
+    while len(result) < count and attempts < max_attempts:
+        attempts += 1
         for s in strategies:
-            if len(result) >= count:
+            if len(result) >= count or attempts >= max_attempts:
                 break
             try:
                 d = s()
