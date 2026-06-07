@@ -325,3 +325,33 @@ Das Tool in `src/converter.py` kann automatisch zwischen den Formen konvertieren
 | 4 → 1 | `form4_to_form1(method_expr)` |
 
 Das Tool arbeitet mit Pythons `ast`-Modul und wandelt den Ausdrucksbaum in die Zielform um.
+
+
+
+
+
+// 
+Literale sind feste, direkt hingeschriebene Werte — im Kontext der Aufgabe also Zahlen wie 2, 3, 5. Keine Variablen, keine Berechnungen. Anders gesagt: alles, was nicht a, b, c, d, e ist, sondern ein konkreter Zahlenwert.
+
+Variablen sind Namen, die Werte speichern — hier a, b, c, d, e, t1, t2, ... Im Gegensatz zu Literalen (festen Zahlen) können Variablen unterschiedliche Werte annehmen. In den Ausdrücken stehen sie für die Eingabewerte der Berechnung.
+
+- + (Addition)
+- - (Subtraktion, auch unäres Minus wie in -d)
+- * (Multiplikation)
+- // (Ganzzahldivision, "floordiv")
+Nicht erlaubt in Form 1: add(...), sub(...), .__add__(...) etc. — das sind ja gerade die Funktionsaufrufe aus Form 3 und 4.
+
+Klammern ( ) dienen in Form 1 dazu, die Auswertungsreihenfolge festzulegen, wo sie von den Standard-Regeln (Punkt-vor-Strich, links-assoziativ) abweicht.
+Beispiel:
+- a + b * c → (b * c) wird zuerst berechnet (Punkt-vor-Strich), Klammern unnötig
+- (a + b) * c → Klammern nötig, sonst würde b * c zuerst kommen
+In der Aufgabenstellung steht "Klammern nur, wo nötig" — man setzt sie also nur, wenn die Operator-Präzedenz sonst die falsche Reihenfolge ergeben würde.
+
+- a = Variable (linke Seite der Zuweisung)
+- b, c = Variablen im Ausdruck
+- 2, 3 = Literale (feste Zahlen)
+- +, * = Operatoren
+- (, ) = Klammern (nötig, weil sonst b + 2 * c + 3 gerechnet würde)
+
+
+ Im Beispiel a = (b + 2) * (c + 3) ist a die Variable auf der linken Seite. Es ist in dieser Aufgabe immer a — die Ergebnisvariable, in der das Endergebnis gespeichert wird.
